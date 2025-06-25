@@ -1,0 +1,31 @@
+{
+    "_": "Message",
+    "id": 1,
+    "sender_chat": {
+        "_": "Chat",
+        "id": -1002611854380,
+        "type": "ChatType.CHANNEL",
+        "is_verified": false,
+        "is_restricted": false,
+        "is_creator": false,
+        "is_scam": false,
+        "is_fake": false,
+        "title": "Тестовый канал",
+        "has_protected_content": false
+    },
+    "date": "2025-06-25 18:03:17",
+    "chat": {
+        "_": "Chat",
+        "id": -1002611854380,
+        "type": "ChatType.CHANNEL",
+        "is_verified": false,
+        "is_restricted": false,
+        "is_creator": false,
+        "is_scam": false,
+        "is_fake": false,
+        "title": "Тестовый канал",
+        "has_protected_content": false
+    },
+    "service": "MessageServiceType.CHANNEL_CHAT_CREATED",
+    "channel_chat_created": true
+}

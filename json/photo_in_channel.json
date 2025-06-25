@@ -1,0 +1,47 @@
+{
+    "_": "Message",
+    "id": 2,
+    "sender_chat": {
+        "_": "Chat",
+        "id": -1002611854380,
+        "type": "ChatType.CHANNEL",
+        "is_verified": false,
+        "is_restricted": false,
+        "is_creator": false,
+        "is_scam": false,
+        "is_fake": false,
+        "title": "Тестовый канал",
+        "has_protected_content": false
+    },
+    "date": "2025-06-25 18:06:31",
+    "chat": {
+        "_": "Chat",
+        "id": -1002611854380,
+        "type": "ChatType.CHANNEL",
+        "is_verified": false,
+        "is_restricted": false,
+        "is_creator": false,
+        "is_scam": false,
+        "is_fake": false,
+        "title": "Тестовый канал",
+        "has_protected_content": false
+    },
+    "mentioned": false,
+    "scheduled": false,
+    "from_scheduled": false,
+    "media": "MessageMediaType.PHOTO",
+    "has_protected_content": false,
+    "has_media_spoiler": false,
+    "photo": {
+        "_": "Photo",
+        "file_id": "AgACAgIAAyEFAASbrbwsAAMCaFwQdxASjzLHboVLy8tmFoCbTjUAAqv0MRsQB-FKd7oHxHS2XXMACAEAAwIAA3gABx4E",
+        "file_unique_id": "AgADq_QxGxAH4Uo",
+        "width": 729,
+        "height": 494,
+        "file_size": 32140,
+        "date": "2025-06-25 18:06:31"
+    },
+    "views": 1,
+    "forwards": 0,
+    "outgoing": false
+}
