@@ -1,0 +1,44 @@
+services:
+  sync-db:
+    image: mariadb:11.4
+    container_name: sync-db
+    ports:
+      - "127.0.0.1:8003:3306"
+    environment:
+      - TZ=Europe/Moscow
+      - MYSQL_ROOT_PASSWORD=sync
+      - MYSQL_DATABASE=sync
+      - MYSQL_USER=sync
+      - MYSQL_PASSWORD=sync
+    volumes:
+      - ./db_data:/var/lib/mysql
+      - ./backup:/backup
+    networks:
+      - flex
+    mem_limit: 512m  # Ограничение памяти
+    mem_reservation: 128m  # Резервирование памяти
+    restart: unless-stopped
+  user_bot_1:
+      # docker-compose up glonass_bot --build
+    build:
+      context: . # Указываем, что образ собирается из текущей директории (где Dockerfile)
+      dockerfile: ./Dockerfile_userbot
+    container_name: user_bot_${PHONE_1}
+    environment:
+      - NUMBER=${PHONE_1}
+    env_file:
+      - .env
+    volumes:
+      - ./postgres.py:/app/postgres.py:ro
+      - ./store_service.py:/app/store_service.py:ro
+      - ./telegram_sync.py:/app/user_bot.py:ro
+      - ./sessions:/app/sessions
+    depends_on:
+      - telegram_sync_db
+    networks:
+      - telegram_sync
+    restart: unless-stopped
+
+networks:
+  telegram_sync:
+    driver: bridge
